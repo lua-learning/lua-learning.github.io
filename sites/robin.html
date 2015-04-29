@@ -1,0 +1,116 @@
+
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Projektseite Lua - Robin</title>
+  <link rel='stylesheet' href='../assets/basscss.min.css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic' rel='stylesheet' type='text/css'>
+
+  <style>
+    .vollkorn {
+      font-family: 'Vollkorn';
+    }
+
+    .flex-justify {
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="py3 navy bg-darken-1">
+    <header class='center container'>
+    <img src='../assets/logo.png' alt='logo'>
+
+    <blockquote class='py3 h2 vollkorn'>
+      <h1 class='m0 vollkorn gray'>Hallo!</h1>
+      Dies ist eine Projektseite über den Lernprozess von <b>Lua</b> und das Game Framework <b>Löve2d</b>
+    </blockquote>  
+
+     <div class="mt2 flex">
+       <div>
+          <a href="../sites/henri.html" class="button py2 m0 button-transparent">Henri</a>
+          <a href="../sites/toni.html" class="button button-narrow py2 m0 button-transparent">Toni</a>
+          <a href="../sites/robin.html" class="button button-narrow py2 m0 button-transparent">Robin</a>
+          <a href="../sites/fabian.html" class="button button-narrow py2 m0 button-transparent">Fabian</a>
+        </div>
+        <div class='flex-auto right-align'>
+          <a href="../index.html" class="button py2 m0 button-transparent">Startseite &#8594;</a>
+        </div>
+     </div>
+    </header>
+  </div>
+
+  <section class="container px2 py3 navy">
+	<h2>Dokumentation Robin Steiger</h2>
+
+	<blockquote>&bdquo;Ein kleines Bullethell Spiel, bei dem man die Gegner vernichten muss, während man ihren Schüssen ausweicht. Dabei wird das Spiel nach jedem Boss schwieriger.&ldquo;</blockquote>
+
+	<div class="mb4">
+		<a href='../assets/space_shooter.zip' class="button white bg-blue">Spiel herunterladen</a>
+		<a href='../assets/doku_robin_steiger.docx' class="button blue button-outline">Komplette Dokumentation</a>
+		<hr class="bg-light-gray">
+	</div>
+
+	<p>Dies ist die Dokumentation die ich während der Entwicklung von Space Shooter geschrieben habe. Nachfolgend einige Funktionen die näher beschrieben werden:</p>
+
+	<h3>CheckCollision()</h3>
+	<p>Die Funktion CheckCollision habe ich nicht selber erstellt, sondern vom Love2d-Wiki. Die Funktion erkennt wenn zwei Objekte sich überschneiden und kann verwendet werden um eine Kollision zu erstellen.</p>
+	<img src="robin1.png" class='mb2'> 
+
+	<h3>CreateEnemy()</h3>
+	<p>Die Funktion CreateEnemy fügt Gegner in eine Tabelle ein und berechnet wie sie sich über den Bildschirm bewegen, ebenfalls löscht sie Gegner die sich ausserhalb des Bildschirmes befinden. Zu dem erstellt es für jeden Gegner eine Tabelle, welche später die Schüsse beinhaltet.</p>
+	<img src="robin2.png" class='mb2'>
+
+	<h3>EnemyBullets()</h3>
+	<p>Die Funktion EnemyBullets fügt für jeden Gegner Schüsse in eine Tabelle ein, hier werden ebenfalls die Flugbahnen der Schüsse berechnet, sowie das Löschen der Schüsse beim Verlassen des Bildschirmes.</p>
+	<img src="robin3.png" class='mb2'>
+
+	<h3>PlayerBullet()</h3>
+	<p>Die Funktion PlayerBullet fügt immer wenn die Space-Taste gedrückt ist, Schüsse des Spielers in eine Tabelle ein, die Flugbahnen dieser wird danach berechnet, auch hier werden die Schüsse beim Verlassen des Bildschirmes gelöscht.</p>
+	<img src="robin4.png" class='mb2'>
+
+	<h3>DrawTable()</h3>
+	<p>Die Funktion DrawTable zeichnet den Inhalt einer Tabelle.</p>
+	<img src="robin5.png" class='mb2'>
+
+	<h3>BossAttack1()</h3>
+	<p>Die Funktion BossAttack1 fügt die Schüsse des Bosses in eine Tabelle ein. Auch hier werden wieder die Flugbahnen berechnet, hier wird einfach noch der Winkel angegeben, in welchen die Schüsse sich bewegen sollen. Verlassen die Schüsse den Bildschirm werden sie gelöscht</p>
+	<img src="robin6.png" class='mb2'>
+
+	<h3>BossAttack2()</h3>
+	<p>Die Funktion BossAttack2 fügt die Schüsse des Bosses in eine Tabelle ein. Der Punk auf der X-Achse ist hier zufällig generiert. Die Flugbahnen der Schüsse werden auch hier in der Funktion selbst berechnet. Verlassen die Schüsse den Bildschirm werden sie gelöscht.</p>
+	<img src="robin7.png" class='mb2'>
+
+	<h2>Weitere Strukturen</h2>
+	<p>Hier werde ich einige weitere Strukturen aufzeigen, wie z.B. Bewegung des Spielers oder Beenden des Spieles.</p>
+
+	<h3>Bewegung</h3>
+	<p>Der  Spieler kann sich mittels WASD in alle Richtungen bewegen.</p>
+	<img src="robin8.png" class='mb2'>
+
+	<h3>Spiel schliessen</h3>
+	<p>Mittels der Escape-Taste kann man das Spiel ganz einfach schliessen, dabei wird nichts gespeichert.</p>
+	<img src="robin9.png" class='mb2'>
+
+	<h3>Bilder laden</h3>
+	<p>Um Bilder verwenden zu können, müssen diese zuerst vorgeladen werden.</p>
+	<img src="robin10.png" class='mb2'>
+
+	<h3>Lebensbalken</h3>
+	<p>Alle meine Gegner und der Spieler besitzen einen Lebensbalken. Dieser funktioniert wie folgt.</p>
+	<img src="robin11.png" class='mb2'>
+
+	<p>Jedes Mal wenn z.B. der Spieler getroffen wird, wird einer Variablen ein Betrag, hier 10, hinzugefügt. Dieser wird dann später beim Zeichnen des Lebensbalkens wieder abgezogen.</p>
+	<img src="robin12.png" class='mb2'>
+
+	<h2>Space Shooter Spiel</h2>
+
+	<p>Das Spiel wird mittels WASD gesteuert, mit der Leertaste können Laser abgefeuert werden.</p>
+	<p>Hier einige Screenshots vom Endprodukt:</p>
+	<img src="robin13.png" class='mb2'>
+	<p>Game Over Screen, hier wird der erreichte Score ausgegeben. Man kann das Spiel neustarten in dem man „r“ drückt.</p>
+	<img src="robin14.png" class='mb2'>
+	<img src="robin15.png" class='mb2'>
+  </section>
+</body>
+</html>

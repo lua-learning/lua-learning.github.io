@@ -1,0 +1,132 @@
+
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Projektseite Lua - Toni</title>
+  <link rel='stylesheet' href='../assets/basscss.min.css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic' rel='stylesheet' type='text/css'>
+
+  <style>
+    .vollkorn {
+      font-family: 'Vollkorn';
+    }
+
+    .flex-justify {
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="py3 navy bg-darken-1">
+    <header class='center container'>
+    <img src='../assets/logo.png' alt='logo'>
+
+    <blockquote class='py3 h2 vollkorn'>
+      <h1 class='m0 vollkorn gray'>Hallo!</h1>
+      Dies ist eine Projektseite über den Lernprozess von <b>Lua</b> und das Game Framework <b>Löve2d</b>
+    </blockquote>  
+
+     <div class="mt2 flex">
+       <div>
+          <a href="../sites/henri.html" class="button py2 m0 button-transparent">Henri</a>
+          <a href="../sites/toni.html" class="button button-narrow py2 m0 button-transparent">Toni</a>
+          <a href="../sites/robin.html" class="button button-narrow py2 m0 button-transparent">Robin</a>
+          <a href="../sites/fabian.html" class="button button-narrow py2 m0 button-transparent">Fabian</a>
+        </div>
+        <div class='flex-auto right-align'>
+          <a href="../index.html" class="button py2 m0 button-transparent">Startseite &#8594;</a>
+        </div>
+     </div>
+    </header>
+  </div>
+
+  <section class="container px2 py3 navy">
+	<h2>SnakeGame</h2>
+	
+	<blockquote>&bdquo;Ein einfaches SnakeGame, bei dem man sogenannte "pellets" einsammeln muss, damit unser Snake länger wird. Falls man den Rand oder sich selber berührt, verliert man. Das Spiel kann man zwar nicht gewinnen, aber man kann sich mit anderen Freunden messen.&ldquo;</blockquote>
+
+	<div class="mb4">
+		<a href='../assets/snake_game.zip' class="button white bg-blue">Spiel herunterladen</a>
+		<a href='../assets/doku_toni_kostal.docx' class="button blue button-outline">Komplette Dokumentation</a>
+		<hr class="bg-light-gray">
+	</div>
+
+	<P>Da
+	jeder der Mitglieder sein eigenes Spiel erstellen sollte, entschied
+	ich mich f&uuml;r den Klassiker &bdquo;Snake&ldquo;. Ich will das
+	Spiel in drei Schwierigkeitsgraden einteilen und zwar einfach, mittel
+	und schwer. Dabei sollte je nach Schwierigkeitsstufen das Spiel
+	schneller oder langsamer ablaufen.<BR>Man muss sogenannte pellets
+	einsammeln, damit das Snake l&auml;nger wird. Mit jedem pellet, dass
+	man eingesammelt hat, wird unser Score um eins erh&ouml;ht. Die
+	pellets werden zuf&auml;llig generiert.<BR>Nachdem man den Rand oder
+	sich selber ber&uuml;hrt hat, erscheint eine Anzeige, welche die
+	Punkte anzeigt und den Schwierigkeitsgrad auf den man gespielt hat.
+	Es wird auch noch gefragt ob man erneut spielen will oder aufh&ouml;ren
+	m&ouml;chte. Man kann leider nur drei Mal das Spiel erneut spielen,
+	da ich den Bug nicht gefunden habe. Deshalb muss man das Spiel
+	nochmals starten, falls man weiterspielen will.</P>
+	<h3><A NAME="_Toc415649656"></A>SnakeGame
+	erstellen</h3>
+	<P>Um
+	die Aufgabe ein bisschen zu erleichtern, habe ich einen <A HREF="https://github.com/2bt/Beer-Snake/blob/master/l%C3%B6ve/main.lua">Code</A>
+	eines anderen Snake-Games als Beispiel genommen.</P>
+	<P>Damit
+	das Ganze ein bisschen &uuml;bersichtlicher gestaltet ist, habe ich
+	es einfach aufgeteilt.</P>
+	<P>Main.lua
+	braucht dann folgendes:</P>
+	<P><IMG SRC="0145123001430289986_doku_toni_kostal_html_m565d9d3f.png" ALIGN=BOTTOM WIDTH=114 HEIGHT=66 BORDER=0></P>
+	<h3><A NAME="_Toc415649657"></A>Conf.lua</h3>
+	<P><A NAME="_Toc415649658"></A><A NAME="_Toc415649203"></A>
+	<IMG SRC="0145123001430289986_doku_toni_kostal_html_4ece89b5.png" ALIGN=BOTTOM WIDTH=373 HEIGHT=205 BORDER=0></P>
+	<h3><A NAME="_Toc415649659"></A>Game.lua</h3>
+	<P><IMG SRC="0145123001430289986_doku_toni_kostal_html_m420fe740.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=411 BORDER=0></P>
+	<P>Hier
+	sind die Steuerungen des Spiels enthalten und die Funktion f&uuml;r
+	loseGame</P>
+	<h3><A NAME="_Toc415649660"></A>Keyboard.lua</h3>
+	<P><IMG SRC="0145123001430289986_doku_toni_kostal_html_m462138c7.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=558 BORDER=0></P>
+	<P>Wenn
+	man &bdquo;escape&ldquo; dr&uuml;ckt, wird das Spiel beendet und wenn
+	man &bdquo;r&ldquo; dr&uuml;ckt wird das Spiel neugestartet. Hier ist
+	auch festgelegt mit welcher Taste man die Schwierigkeitsstufen
+	ausw&auml;hlen kann.</P>
+	<h3><A NAME="_Toc415649661"></A>
+	Main.lua</h3>
+	<P><IMG SRC="0145123001430289986_doku_toni_kostal_html_m6e9f0135.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=641 BORDER=0></P>
+	<P>Wird
+	festgelegt, wo der Spieler starten muss.</P>
+	<h3><A NAME="_Toc415649662"></A>
+	pellet.lua</h3>
+	<P><A NAME="_Toc415649663"></A><A NAME="_Toc415649208"></A>
+	<IMG SRC="0145123001430289986_doku_toni_kostal_html_3d5f1be1.png" ALIGN=BOTTOM WIDTH=539 HEIGHT=309 BORDER=0></P>
+	<P>pellet
+	wird an einem zuf&auml;lligen Ort generiert</P>
+	<h3><A NAME="_Toc415649664"></A>render.lua</h3>
+	<P><A NAME="_Toc415649665"></A><A NAME="_Toc415649210"></A>
+	<IMG SRC="0145123001430289986_doku_toni_kostal_html_m1cd743cb.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=344 BORDER=0></P>
+	<P>Wird
+	festgelegt in den verschiedenen screens passieren sollte</P>
+	<h3><A NAME="_Toc415649666"></A>
+	Snake.lua</h3>
+	<P><A NAME="_Toc415649667"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_6d6d6d79.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=617 BORDER=0></P>
+	<P>Wenn
+	Snake Rand ber&uuml;hrt, wird screen &bdquo;lose&ldquo;
+	angezeigt.<BR>Wenn Snake pellet ber&uuml;hrt, wird die L&auml;nge und
+	Score um eins gr&ouml;sser.</P>
+	<h3><A NAME="_Toc415649668"></A>
+	tile.lua</h3>
+	<P><A NAME="_Toc415649669"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_2ae30fd2.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=302 BORDER=0></P>
+	<h2><A NAME="_Toc415649670"></A>SnakeGame
+	fertiggestellt</h2>
+	<h3><A NAME="_Toc415649671"></A>Startmen&uuml;</h3>
+	<P><IMG SRC="0145123001430289986_doku_toni_kostal_html_67180893.png" ALIGN=BOTTOM WIDTH=341 HEIGHT=358 BORDER=0></P>
+	<h3><A NAME="_Toc415649672"></A>
+	InGame</h3>
+	<P><A NAME="_Toc415649673"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_137ddae2.png" ALIGN=BOTTOM WIDTH=317 HEIGHT=332 BORDER=0></P>
+	<h3><A NAME="_Toc415649674"></A>GameLost</h3>
+	<P><A NAME="_Toc415649675"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_75b8f20f.png" ALIGN=BOTTOM WIDTH=354 HEIGHT=371 BORDER=0></P>
+  </section>
+</body>
+</html>

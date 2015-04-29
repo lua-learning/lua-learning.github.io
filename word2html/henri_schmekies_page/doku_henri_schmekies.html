@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=us-ascii">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (FreeBSD/amd64)">
+	<META NAME="AUTHOR" CONTENT="Henri">
+	<META NAME="CREATED" CONTENT="20141119;8160000">
+	<META NAME="CHANGEDBY" CONTENT="Henri Schmekies">
+	<META NAME="CHANGED" CONTENT="20150429;6230000">
+	<META NAME="AppVersion" CONTENT="15.0000">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-left: 0.98in; margin-right: 0.98in; margin-top: 0.98in; margin-bottom: 0.79in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		A:link { color: #0563c1; so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0563c1" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652340"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">Lua
+Einstieg</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652341"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Variablen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m2e1c6913.png" ALIGN=BOTTOM WIDTH=138 HEIGHT=48 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Variablen
+werden in Lua ohne eine Vorhut wie &bdquo;var&ldquo; oder &bdquo;$&ldquo;
+definiert. Lokale Variablen jedoch m&uuml;ssen mit einem &bdquo;local&ldquo;
+versehen werden, damit sie von lua als lokale Variable erkannt wird.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652342"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Operatoren</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m4971448d.png" ALIGN=BOTTOM WIDTH=319 HEIGHT=198 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Dies
+ist ein Ausschnitt der wichtigsten Lua Operatoren. Mit # kann die
+Anzahl Elemente eines Tables oder Arrays ausgegeben werden.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652343"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">While
+Schleife</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m2e9bf5c6.png" ALIGN=BOTTOM WIDTH=176 HEIGHT=156 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Dies
+ist eine normale While Schleife. Print gibt den Wert von i auf den
+Bildschirm aus.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415652344"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Repeat
+Schleife</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m165d7ea0.png" ALIGN=BOTTOM WIDTH=149 HEIGHT=155 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Dies
+ist eine Repeat Schleife. Sie l&auml;uft solange, bis die Aussage
+wahr wird.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652345"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Numerische
+For Schleife</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_4c039e40.png" ALIGN=BOTTOM WIDTH=294 HEIGHT=97 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Der
+Aufbau einer numerischen For Schleife.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_1aa13493.png" ALIGN=BOTTOM WIDTH=191 HEIGHT=157 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Beispiel
+f&uuml;r eine numerische For Schleife.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652346"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">If
+Funktion</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m1cfef02a.png" ALIGN=BOTTOM WIDTH=88 HEIGHT=68 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Diese
+Funktion tut etwas, wenn etwas ist und mit einem else kann etwas
+gemacht werden, wenn dem nicht so ist. Es kann ausserdem mit else und
+elseif gearbeitet werden.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415652347"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Generische
+For Schleife</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Generische
+For Schleifen arbeiten mit Tables oder Arrays.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m51972225.png" ALIGN=BOTTOM WIDTH=333 HEIGHT=22 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m5bb0fa68.png" ALIGN=BOTTOM WIDTH=261 HEIGHT=65 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Generische
+For Schleife mit &bdquo;pairs&ldquo; gibt den Key und den Wert eines
+Items zur&uuml;ck.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_6836c617.png" ALIGN=BOTTOM WIDTH=169 HEIGHT=27 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_389192d1.png" ALIGN=BOTTOM WIDTH=288 HEIGHT=72 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Generische
+For Schleife mit &bdquo;ipairs&ldquo; kann nur f&uuml;r Items mit
+Indexen benutzt werden(Arrays) und geht dann einfach durch alle Items
+durch bis es beim letzten Item angekommen ist und gibt die Werte
+zur&uuml;ck.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652348"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Funktionen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m84f10c4.png" ALIGN=BOTTOM WIDTH=215 HEIGHT=62 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Aufbau
+einer Funktion in Lua.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m720719a6.png" ALIGN=BOTTOM WIDTH=292 HEIGHT=114 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Beispiel
+einer Funktion in Lua.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652349"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Tables</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_5e0ccf16.png" ALIGN=BOTTOM WIDTH=66 HEIGHT=26 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Erstellen
+eines leeren Tables.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m54a5c8a9.png" ALIGN=BOTTOM WIDTH=286 HEIGHT=26 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Table
+mit Daten.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m1de8cb8d.png" ALIGN=BOTTOM WIDTH=140 HEIGHT=26 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Ausgeben
+von Worten in einem Table.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652350"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Arrays</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m33d8c702.png" ALIGN=BOTTOM WIDTH=247 HEIGHT=49 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Erstellen
+und ver&auml;ndern der Werte eines Arrays. Jeder Wert bekommt einen
+Index zugewiesen startend bei 1.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m76516178.png" ALIGN=BOTTOM WIDTH=181 HEIGHT=70 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Ausgeben
+der Werte eines Arrays. Mit # werden die Anzahl Werte in einem Array
+ausgegeben.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652351"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Table
+Funktionen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_621816cf.png" ALIGN=BOTTOM WIDTH=428 HEIGHT=140 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Verschiedene
+Funktionen um mit Werten in Tables zu arbeiten.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652352"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">String
+Funktionen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m3a8053b4.png" ALIGN=BOTTOM WIDTH=354 HEIGHT=132 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Verschiedene
+Funktionen um mit Strings zu arbeiten.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">L&ouml;ve2D
+Einstieg</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652354"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Love.load</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_6a1a437f.png" ALIGN=BOTTOM WIDTH=323 HEIGHT=115 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652355"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Love.update</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m3d900ffa.png" ALIGN=BOTTOM WIDTH=264 HEIGHT=98 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652356"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Love.draw</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m2c0dac43.png" ALIGN=BOTTOM WIDTH=315 HEIGHT=80 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Love.load,
+Love.update und Love.draw sind die drei Hauptfunktionen eines Love2D
+Programmes. In ihnen wird ein grosser Teil des Programmes
+geschrieben.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652357"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Love.mousepressed/mousereleased</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_m20ca70c0.png" ALIGN=BOTTOM WIDTH=348 HEIGHT=118 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_286f9e1c.png" ALIGN=BOTTOM WIDTH=295 HEIGHT=98 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415652358"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Love.keypressed/keyreleased</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_76a893af.png" ALIGN=BOTTOM WIDTH=258 HEIGHT=130 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0958356001430288653_doku_henri_schmekies_html_62d59907.png" ALIGN=BOTTOM WIDTH=268 HEIGHT=135 BORDER=0></P>
+</BODY>
+</HTML>

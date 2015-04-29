@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=us-ascii">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (FreeBSD/amd64)">
+	<META NAME="AUTHOR" CONTENT="Henri">
+	<META NAME="CREATED" CONTENT="20150114;13250000">
+	<META NAME="CHANGEDBY" CONTENT="Henri Schmekies">
+	<META NAME="CHANGED" CONTENT="20150429;6450000">
+	<META NAME="AppVersion" CONTENT="15.0000">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-left: 0.98in; margin-right: 0.98in; margin-top: 0.49in; margin-bottom: 0.49in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		A:link { color: #0563c1; so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0563c1" DIR="LTR">
+
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649655"></A><A NAME="_GoBack"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">SnakeGame</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Da
+jeder der Mitglieder sein eigenes Spiel erstellen sollte, entschied
+ich mich f&uuml;r den Klassiker &bdquo;Snake&ldquo;. Ich will das
+Spiel in drei Schwierigkeitsgraden einteilen und zwar einfach, mittel
+und schwer. Dabei sollte je nach Schwierigkeitsstufen das Spiel
+schneller oder langsamer ablaufen.<BR>Man muss sogenannte pellets
+einsammeln, damit das Snake l&auml;nger wird. Mit jedem pellet, dass
+man eingesammelt hat, wird unser Score um eins erh&ouml;ht. Die
+pellets werden zuf&auml;llig generiert.<BR>Nachdem man den Rand oder
+sich selber ber&uuml;hrt hat, erscheint eine Anzeige, welche die
+Punkte anzeigt und den Schwierigkeitsgrad auf den man gespielt hat.
+Es wird auch noch gefragt ob man erneut spielen will oder aufh&ouml;ren
+m&ouml;chte. Man kann leider nur drei Mal das Spiel erneut spielen,
+da ich den Bug nicht gefunden habe. Deshalb muss man das Spiel
+nochmals starten, falls man weiterspielen will.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649656"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">SnakeGame
+erstellen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Um
+die Aufgabe ein bisschen zu erleichtern, habe ich einen <A HREF="https://github.com/2bt/Beer-Snake/blob/master/l%C3%B6ve/main.lua">Code</A>
+eines anderen Snake-Games als Beispiel genommen.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Damit
+das Ganze ein bisschen &uuml;bersichtlicher gestaltet ist, habe ich
+es einfach aufgeteilt.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Main.lua
+braucht dann folgendes</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0145123001430289986_doku_toni_kostal_html_m565d9d3f.png" ALIGN=BOTTOM WIDTH=114 HEIGHT=66 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649657"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Conf.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649658"></A><A NAME="_Toc415649203"></A>
+<IMG SRC="0145123001430289986_doku_toni_kostal_html_4ece89b5.png" ALIGN=BOTTOM WIDTH=373 HEIGHT=205 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649659"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Game.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0145123001430289986_doku_toni_kostal_html_m420fe740.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=411 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Hier
+sind die Steuerungen des Spiels enthalten und die Funktion f&uuml;r
+loseGame</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649660"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Keyboard.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0145123001430289986_doku_toni_kostal_html_m462138c7.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=558 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Wenn
+man &bdquo;escape&ldquo; dr&uuml;ckt, wird das Spiel beendet und wenn
+man &bdquo;r&ldquo; dr&uuml;ckt wird das Spiel neugestartet. Hier ist
+auch festgelegt mit welcher Taste man die Schwierigkeitsstufen
+ausw&auml;hlen kann.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415649661"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Main.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0145123001430289986_doku_toni_kostal_html_m6e9f0135.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=641 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Wird
+festgelegt, wo der Spieler starten muss.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415649662"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">pellet.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649663"></A><A NAME="_Toc415649208"></A>
+<IMG SRC="0145123001430289986_doku_toni_kostal_html_3d5f1be1.png" ALIGN=BOTTOM WIDTH=539 HEIGHT=309 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>pellet
+wird an einem zuf&auml;lligen Ort generiert</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649664"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">render.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649665"></A><A NAME="_Toc415649210"></A>
+<IMG SRC="0145123001430289986_doku_toni_kostal_html_m1cd743cb.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=344 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Wird
+festgelegt in den verschiedenen screens passieren sollte</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415649666"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Snake.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649667"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_6d6d6d79.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=617 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Wenn
+Snake Rand ber&uuml;hrt, wird screen &bdquo;lose&ldquo;
+angezeigt.<BR>Wenn Snake pellet ber&uuml;hrt, wird die L&auml;nge und
+Score um eins gr&ouml;sser.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415649668"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">tile.lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649669"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_2ae30fd2.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=302 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649670"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">SnakeGame
+fertiggestellt</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649671"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Startmen&uuml;</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0145123001430289986_doku_toni_kostal_html_67180893.png" ALIGN=BOTTOM WIDTH=341 HEIGHT=358 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc415649672"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">InGame</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649673"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_137ddae2.png" ALIGN=BOTTOM WIDTH=317 HEIGHT=332 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649674"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">GameLost</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc415649675"></A><IMG SRC="0145123001430289986_doku_toni_kostal_html_75b8f20f.png" ALIGN=BOTTOM WIDTH=354 HEIGHT=371 BORDER=0></P>
+<DIV TYPE=FOOTER>
+	<P STYLE="margin-top: 0.26in; margin-bottom: 0in; line-height: 100%">
+	<BR>
+	</P>
+</DIV>
+</BODY>
+</HTML>

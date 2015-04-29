@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=us-ascii">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (FreeBSD/amd64)">
+	<META NAME="AUTHOR" CONTENT="Henri">
+	<META NAME="CREATED" CONTENT="20141119;8160000">
+	<META NAME="CHANGEDBY" CONTENT="Henri Schmekies">
+	<META NAME="CHANGED" CONTENT="20150429;7430000">
+	<META NAME="AppVersion" CONTENT="15.0000">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-left: 0.98in; margin-right: 0.98in; margin-top: 0.98in; margin-bottom: 0.79in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		A:link { color: #0563c1; so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0563c1" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">Package
+Management in Lua</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>In
+jeder Programmiersprache braucht es eine Software f&uuml;r die
+Verwaltung von Code St&uuml;cken. Fr&uuml;her hat man mit ZIP
+umhergeschoben, aber heutzutage ist es wichtig ein Package Management
+zu besitzen f&uuml;r gr&ouml;ssere Applikationen. Viele Hilfsmodule
+sind Open Source und es ist wichtig, diese einfach konsumieren zu
+k&ouml;nnen.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Ich
+habe schon Erfahrungen mit einem Package Manager gemacht im
+JavaScript &Ouml;kosystem. Im modernen JavaScript Version 6 kann man
+die Sprache auch im Server Bereich einsetzen. Server-Side JavaScript
+hat in 2011 begonnen, und hat in den folgenden Jahren sehr
+popularisiert. Es war der Beginn, die Skriptsprache JavaScript zu
+modernisieren. Damit kam auch <A HREF="https://www.npmjs.com/">NPM</A>
+der f&uuml;r <I>Node Package Manager</I> steht. Dort konnte ich sehr
+viel &uuml;ber Versionierung lernen.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Vorteile</FONT></FONT></P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Kleine
+	modulare Teile k&ouml;nnen von Drittentwickler gebraucht werden.
+	Diese sind meist gut getestet und machen nur eine Sache gut (Unix
+	Philosophie)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Versionierung
+	vereinfacht die Wartung von den etlichen Modulen. Sogenannte Semver
+	Ranges versichern, dass man Updates bekommt, diese aber den
+	existieren Code nicht besch&auml;digen (Non-Breaking Changes)</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Durch
+	eine Metadatenfile kann der Package Manager die &bdquo;Dependencies&ldquo;
+	einfach aufl&ouml;sen und installieren. Das Ziel ist es, einer
+	Person den Code mit dem Metadatenfile zu schicken und er kann die
+	Dependencies problemlos installieren.<BR><IMG SRC="0684908001430293397_doku_fabian_eichenberger_html_m43da555a.png" ALIGN=BOTTOM WIDTH=242 HEIGHT=202 BORDER=0></FONT></FONT></P>
+</OL>
+<P STYLE="text-indent: 0.25in; margin-bottom: 0.14in; line-height: 100%">
+<FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>Abbildung
+: Beispiel Metadatenfile</I></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2 STYLE="font-size: 11pt">Nachteile</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Einen
+Nachteil den ich manchmal immer wieder sehe, sind die sogenannten
+Aufl&ouml;sungsfehler. Das passiert wenn zwei Module auf das <I>gleiche
+</I>Package verweisen aber mit einer anderen Versionsnummer. Man kann
+unterscheiden zwischen &bdquo;peerDependencies&ldquo; und
+&bdquo;Dependencies&ldquo;. &bdquo;peerDependencies&ldquo; gibt <I>nicht
+</I>die genaue Abh&auml;ngigkeit ab sondern bestimmt einfach, dass
+der Benutzer des Moduls diese Version <I>mitinstallieren</I> soll.
+Dies hat den Vorteil dass der Code nicht komplett dupliziert wird
+aber den Nachteil, nur eine Version benutzen zu k&ouml;nnen im ganzen
+Projekt.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2 STYLE="font-size: 11pt">LuaRocks</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>In
+Lua gibt es auch einen Package Manager namens <A HREF="https://luarocks.org/">LuaRocks</A>.
+Das war mein Ziel eine etwas andere Perspektive zu gewinnen und wie
+andere Programmiersprachen dieses Problem angehen. </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Mit
+LuaRocks kann man das ganze Projekt auch ausf&uuml;hren und
+&bdquo;builden&ldquo;. Da Lua nicht auf dem Web aufbaut, hat jedes
+Modul seinen eigenen Kompilierungsschritt. Dies ist etwas aufwendig
+f&uuml;r Beginner und braucht eine gewisse Lernkurve zu &uuml;berwinden.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Ich
+habe kleine Packages installiert und diese ausprobiert. Installation
+war ziemlich einfach: ein einfach <I>luarocks install</I> installiert
+das Modul:</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0684908001430293397_doku_fabian_eichenberger_html_m3cd207d2.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=103 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Wichtig
+ist der optionale Parameter <I>&ndash;save </I>der das Modul in das
+Metadatenfile einf&uuml;gt.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Glossar</FONT></FONT></P>
+<TABLE WIDTH=604 BORDER=1 BORDERCOLOR="#c3c9c9" CELLPADDING=7 CELLSPACING=0 FRAME=VOID RULES=ROWS>
+	<COL WIDTH=288>
+	<COL WIDTH=288>
+	<TR VALIGN=TOP>
+		<TD WIDTH=288>
+			<P STYLE="margin-top: 0.04in; font-style: normal; font-weight: normal">
+			<FONT FACE="Fira Sans, serif"><FONT SIZE=2>Wort</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=288>
+			<P STYLE="margin-top: 0.04in; font-style: normal; font-weight: normal">
+			<FONT FACE="Fira Sans, serif"><FONT SIZE=2>Beschreibung</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=288>
+			<P STYLE="margin-top: 0.04in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Dependencies</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=288>
+			<P STYLE="margin-top: 0.04in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Abh&auml;ngigkeiten
+			von Modulen</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=288>
+			<P STYLE="margin-top: 0.04in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Metadatenfile</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=288>
+			<P STYLE="margin-top: 0.04in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Ein
+			File welches Informationen &uuml;ber die Software enth&auml;lt</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+</BODY>
+</HTML>

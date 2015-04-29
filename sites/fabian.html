@@ -1,0 +1,156 @@
+
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Projektseite Lua - Fabian</title>
+  <link rel='stylesheet' href='../assets/basscss.min.css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic' rel='stylesheet' type='text/css'>
+
+  <style>
+    .vollkorn {
+      font-family: 'Vollkorn';
+    }
+
+    .flex-justify {
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="py3 navy bg-darken-1">
+    <header class='center container'>
+    <img src='../assets/logo.png' alt='logo'>
+
+    <blockquote class='py3 h2 vollkorn'>
+      <h1 class='m0 vollkorn gray'>Hallo!</h1>
+      Dies ist eine Projektseite über den Lernprozess von <b>Lua</b> und das Game Framework <b>Löve2d</b>
+    </blockquote>  
+
+     <div class="mt2 flex">
+       <div>
+          <a href="../sites/henri.html" class="button py2 m0 button-transparent">Henri</a>
+          <a href="../sites/toni.html" class="button button-narrow py2 m0 button-transparent">Toni</a>
+          <a href="../sites/robin.html" class="button button-narrow py2 m0 button-transparent">Robin</a>
+          <a href="../sites/fabian.html" class="button button-narrow py2 m0 button-transparent">Fabian</a>
+        </div>
+        <div class='flex-auto right-align'>
+          <a href="../index.html" class="button py2 m0 button-transparent">Startseite &#8594;</a>
+        </div>
+     </div>
+    </header>
+  </div>
+
+  <section class="container px2 py3 navy">
+	<h2>Package
+	Management in Lua</h2>
+	<blockquote>&bdquo;Eine Einführung in die Vorteile und Nachteile über das Package Management im JavaScript und Lua Ökosystem.&ldquo;</blockquote>
+
+	<div class="mb4">
+		<a href='../assets/doku_fabian_eichenberger.docx' class="button blue button-outline">Komplette Dokumentation</a>
+		<hr class="bg-light-gray">
+	</div>
+
+	<P>In
+	jeder Programmiersprache braucht es eine Software f&uuml;r die
+	Verwaltung von Code St&uuml;cken. Fr&uuml;her hat man mit ZIP
+	umhergeschoben, aber heutzutage ist es wichtig ein Package Management
+	zu besitzen f&uuml;r gr&ouml;ssere Applikationen. Viele Hilfsmodule
+	sind Open Source und es ist wichtig, diese einfach konsumieren zu
+	k&ouml;nnen.</P>
+	<P>Ich
+	habe schon Erfahrungen mit einem Package Manager gemacht im
+	JavaScript &Ouml;kosystem. Im modernen JavaScript Version 6 kann man
+	die Sprache auch im Server Bereich einsetzen. Server-Side JavaScript
+	hat in 2011 begonnen, und hat in den folgenden Jahren sehr
+	popularisiert. Es war der Beginn, die Skriptsprache JavaScript zu
+	modernisieren. Damit kam auch <A HREF="https://www.npmjs.com/">NPM</A>
+	der f&uuml;r <I>Node Package Manager</I> steht. Dort konnte ich sehr
+	viel &uuml;ber Versionierung lernen.</P>
+	<h3>Vorteile</h3>
+	<OL>
+		<LI><P>Kleine
+		modulare Teile k&ouml;nnen von Drittentwickler gebraucht werden.
+		Diese sind meist gut getestet und machen nur eine Sache gut (Unix
+		Philosophie)</P>
+		<LI><P>Versionierung
+		vereinfacht die Wartung von den etlichen Modulen. Sogenannte Semver
+		Ranges versichern, dass man Updates bekommt, diese aber den
+		existieren Code nicht besch&auml;digen (Non-Breaking Changes)</P>
+		<LI><P>Durch
+		eine Metadatenfile kann der Package Manager die &bdquo;Dependencies&ldquo;
+		einfach aufl&ouml;sen und installieren. Das Ziel ist es, einer
+		Person den Code mit dem Metadatenfile zu schicken und er kann die
+		Dependencies problemlos installieren.<BR><IMG SRC="0684908001430293397_doku_fabian_eichenberger_html_m43da555a.png" ALIGN=BOTTOM WIDTH=242 HEIGHT=202 BORDER=0></P>
+	</OL>
+	<P STYLE="text-indent: 0.25in; margin-bottom: 0.14in; line-height: 100%">
+	<I>Abbildung
+	: Beispiel Metadatenfile</I></P>
+	<h3>Nachteile</h3>
+	<P>Einen
+	Nachteil den ich manchmal immer wieder sehe, sind die sogenannten
+	Aufl&ouml;sungsfehler. Das passiert wenn zwei Module auf das <I>gleiche
+	</I>Package verweisen aber mit einer anderen Versionsnummer. Man kann
+	unterscheiden zwischen &bdquo;peerDependencies&ldquo; und
+	&bdquo;Dependencies&ldquo;. &bdquo;peerDependencies&ldquo; gibt <I>nicht
+	</I>die genaue Abh&auml;ngigkeit ab sondern bestimmt einfach, dass
+	der Benutzer des Moduls diese Version <I>mitinstallieren</I> soll.
+	Dies hat den Vorteil dass der Code nicht komplett dupliziert wird
+	aber den Nachteil, nur eine Version benutzen zu k&ouml;nnen im ganzen
+	Projekt.</P>
+	<h3>LuaRocks</h3>
+	<P>In
+	Lua gibt es auch einen Package Manager namens <A HREF="https://luarocks.org/">LuaRocks</A>.
+	Das war mein Ziel eine etwas andere Perspektive zu gewinnen und wie
+	andere Programmiersprachen dieses Problem angehen. 
+	</P>
+	<P>Mit
+	LuaRocks kann man das ganze Projekt auch ausf&uuml;hren und
+	&bdquo;builden&ldquo;. Da Lua nicht auf dem Web aufbaut, hat jedes
+	Modul seinen eigenen Kompilierungsschritt. Dies ist etwas aufwendig
+	f&uuml;r Beginner und braucht eine gewisse Lernkurve zu &uuml;berwinden.</P>
+	<P>Ich
+	habe kleine Packages installiert und diese ausprobiert. Installation
+	war ziemlich einfach: ein einfach <I>luarocks install</I> installiert
+	das Modul:</P>
+	<P><IMG SRC="0684908001430293397_doku_fabian_eichenberger_html_m3cd207d2.png" ALIGN=BOTTOM WIDTH=605 HEIGHT=103 BORDER=0></P>
+	<P>Wichtig
+	ist der optionale Parameter <I>&ndash;save </I>der das Modul in das
+	Metadatenfile einf&uuml;gt.</P>
+	<P>
+	</P>
+	<h2>Glossar</h2>
+	<TABLE WIDTH=604 BORDER=1 BORDERCOLOR="#c3c9c9" CELLPADDING=7 CELLSPACING=0 FRAME=VOID RULES=ROWS>
+		<COL WIDTH=288>
+		<COL WIDTH=288>
+		<TR VALIGN=TOP>
+			<TD WIDTH=288>
+				<P STYLE="margin-top: 0.04in; font-style: normal; font-weight: normal">
+				Wort</P>
+			</TD>
+			<TD WIDTH=288>
+				<P STYLE="margin-top: 0.04in; font-style: normal; font-weight: normal">
+				Beschreibung</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=288>
+				<P STYLE="margin-top: 0.04in">Dependencies</P>
+			</TD>
+			<TD WIDTH=288>
+				<P STYLE="margin-top: 0.04in">Abh&auml;ngigkeiten
+				von Modulen</P>
+			</TD>
+		</TR>
+		<TR VALIGN=TOP>
+			<TD WIDTH=288>
+				<P STYLE="margin-top: 0.04in">Metadatenfile</P>
+			</TD>
+			<TD WIDTH=288>
+				<P STYLE="margin-top: 0.04in">Ein
+				File welches Informationen &uuml;ber die Software enth&auml;lt</P>
+			</TD>
+		</TR>
+	</TABLE>
+  </section>
+</body>
+</html>

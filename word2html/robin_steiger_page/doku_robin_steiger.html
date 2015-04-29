@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=us-ascii">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (FreeBSD/amd64)">
+	<META NAME="AUTHOR" CONTENT="Henri">
+	<META NAME="CREATED" CONTENT="20141119;8160000">
+	<META NAME="CHANGEDBY" CONTENT="Henri Schmekies">
+	<META NAME="CHANGED" CONTENT="20150429;6430000">
+	<META NAME="AppVersion" CONTENT="15.0000">
+	<META NAME="DocSecurity" CONTENT="0">
+	<META NAME="HyperlinksChanged" CONTENT="false">
+	<META NAME="LinksUpToDate" CONTENT="false">
+	<META NAME="ScaleCrop" CONTENT="false">
+	<META NAME="ShareDoc" CONTENT="false">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.27in 11.69in; margin-left: 0.98in; margin-right: 0.98in; margin-top: 0.98in; margin-bottom: 0.79in }
+		P { margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		A:link { color: #0563c1; so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" TEXT="#000000" LINK="#0563c1" DIR="LTR">
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">Dokumentation
+Robin Steiger</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457981"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">CheckCollision()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_mc1ca95e.png" ALIGN=BOTTOM WIDTH=294 HEIGHT=98 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Die
+Funktion CheckCollision habe ich nicht selber erstellt, sondern vom
+<A HREF="https://www.love2d.org/wiki/BoundingBox.lua">Love2d-Wiki</A>.
+Die Funktion erkennt wenn zwei Objekte sich &uuml;berschneiden und
+kann verwendet werden um eine Kollision zu erstellen.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457982"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">CreateEnemy()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_2e2340ec.png" ALIGN=BOTTOM WIDTH=535 HEIGHT=301 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Die
+Funktion CreateEnemy f&uuml;gt Gegner in eine Tabelle ein und
+berechnet wie sie sich &uuml;ber den Bildschirm bewegen, ebenfalls
+l&ouml;scht sie Gegner die sich ausserhalb des Bildschirmes befinden.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457983"></A><A NAME="_GoBack"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">EnemyBullets()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_m7bedcfa4.png" ALIGN=BOTTOM WIDTH=512 HEIGHT=290 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Die
+Funktion EnemyBullets f&uuml;gt f&uuml;r jeden Gegner Sch&uuml;sse in
+eine Tabelle ein, hier werden ebenfalls die Flugbahnen der Sch&uuml;sse
+berechnet, sowie das L&ouml;schen der Sch&uuml;sse beim Verlassen des
+Bildschirmes. Diese Funktion funktioniert nicht richtig, ich habe
+aber bisher noch keine L&ouml;sung gefunden.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457984"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">PlayerBullet()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_4ea3c780.png" ALIGN=BOTTOM WIDTH=458 HEIGHT=251 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Die
+Funktion PlayerBullet f&uuml;gt immer wenn die Space-Taste gedr&uuml;ckt
+ist, Sch&uuml;sse des Spielers in eine Tabelle ein, die Flugbahnen
+dieser wird danach berechnet, auch hier werden die Sch&uuml;sse beim
+Verlassen des Bildschirmes gel&ouml;scht. </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457985"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">DrawTable()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_66d9dacd.png" ALIGN=BOTTOM WIDTH=309 HEIGHT=99 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Die
+Funktion DrawTable zeichnet den Inhalt einer Tabelle, sofern ein Bild
+definiert ist.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457986"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">BossAttack1()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_m6a93aa49.png" ALIGN=BOTTOM WIDTH=473 HEIGHT=276 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Die
+Funktion BossAttack1 f&uuml;gt die Sch&uuml;sse des Bosses in eine
+Tabelle ein. Auch hier werden wieder die Flugbahnen berechnet, hier
+wird einfach noch der Winkel angegeben, in welchen die Sch&uuml;sse
+sich bewegen sollen. Verlassen die Sch&uuml;sse den Bildschirm werden
+sie gel&ouml;scht.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457987"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">BossAttack2()</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_23a77292.png" ALIGN=BOTTOM WIDTH=549 HEIGHT=291 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR><FONT COLOR="#000000"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Die
+Funktion BossAttack2 f&uuml;gt die Sch&uuml;sse des Bosses in eine
+Tabelle ein. Der Punk auf der X-Achse ist hier zuf&auml;llig
+generiert. Die Flugbahnen der Sch&uuml;sse werden auch hier in der
+Funktion selbst berechnet. Verlassen die Sch&uuml;sse den Bildschirm
+werden sie gel&ouml;scht.</FONT></FONT></FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457988"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">Weitere
+Strukturen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Hier
+werde ich einige weitere Strukturen aufzeigen, wie z.B. Bewegung des
+Spielers oder Beenden des Spieles.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457989"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Bewegung</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_2c96a0d6.png" ALIGN=BOTTOM WIDTH=347 HEIGHT=250 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Der
+ Spieler kann sich mittels WASD in alle Richtungen bewegen.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457990"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Spiel
+schliessen</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_m78f6c1f.png" ALIGN=BOTTOM WIDTH=249 HEIGHT=56 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Mittels
+der Escape-Taste kann man das Spiel ganz einfach schliessen, dabei
+wird nichts gespeichert.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457991"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Bilder
+laden</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_m1b6b2fcc.png" ALIGN=BOTTOM WIDTH=443 HEIGHT=171 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Um
+Bilder verwenden zu k&ouml;nnen, m&uuml;ssen diese zuerst vorgeladen
+werden.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><A NAME="_Toc417457992"></A><FONT FACE="Fira Sans, serif"><FONT SIZE=3 STYLE="font-size: 13pt">Lebensbalken</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Alle
+meine Gegner und der Spieler besitzen einen Lebensbalken. Dieser
+funktioniert wie folgt.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_m4d7d26f1.png" ALIGN=BOTTOM WIDTH=342 HEIGHT=140 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Ausschnitt
+aus der CheckCollision Funktion.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Jedes
+Mal wenn z.B. der Spieler getroffen wird, wird einer Variablen ein
+Betrag, hier 10, hinzugef&uuml;gt. Dieser wird dann sp&auml;ter beim
+Zeichnen des Lebensbalkens wieder abgezogen.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_7fdbf841.png" ALIGN=BOTTOM WIDTH=501 HEIGHT=59 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; page-break-before: always"><A NAME="_Toc417457993"></A>
+<FONT FACE="Fira Sans, serif"><FONT SIZE=4 STYLE="font-size: 16pt">SpaceShooter
+Spiel</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><FONT FACE="Fira Sans, serif"><FONT SIZE=2>Hier
+einige Screenshots vom Endprodukt.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_m5c7cb9f7.png" ALIGN=BOTTOM WIDTH=387 HEIGHT=398 BORDER=0></P>
+<P STYLE="margin-bottom: 0in"><IMG SRC="0815367001430289940_doku_robin_steiger_html_1761c3dc.png" ALIGN=BOTTOM WIDTH=385 HEIGHT=396 BORDER=0><FONT FACE="Fira Sans, serif"><FONT SIZE=2><BR>Game
+Over Screen, hier wird der erreichte Score ausgegeben. Man kann das
+Spiel neustarten in dem man &bdquo;r&ldquo; dr&uuml;ckt.</FONT></FONT></P>
+<P STYLE="margin-bottom: 0in; page-break-after: avoid"><IMG SRC="0815367001430289940_doku_robin_steiger_html_5598642.png" ALIGN=BOTTOM WIDTH=394 HEIGHT=405 BORDER=0></P>
+<P STYLE="margin-bottom: 0.14in; line-height: 100%"><FONT COLOR="#44546a"><FONT SIZE=2 STYLE="font-size: 9pt"><I>:
+Boss Kampf</I></FONT></FONT></P>
+</BODY>
+</HTML>
